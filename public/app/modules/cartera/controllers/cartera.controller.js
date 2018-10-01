@@ -26,6 +26,8 @@
             // Animation
             setTimeout(() => {
                 elementCloned.classList.add('transition');
+                // window.scrollTo(0,0);
+                $("HTML, BODY").animate({ scrollTop: 0 }, 200);
             }, 100);
 
         };
@@ -51,6 +53,8 @@
             setTimeout(() => {
                 elementCloned.classList.add('transition');
                 $scope.factoryBar($scope.chart);
+                // window.scrollTo(0,0);
+                $("HTML, BODY").animate({ scrollTop: 0 }, 200);
             }, 100);
         };
 
