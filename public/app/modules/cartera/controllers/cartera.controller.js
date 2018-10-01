@@ -225,9 +225,9 @@
             }
         };
        $scope.cartera = {
-        "color":"yellow",
+        "color":"blue",
         "titulo":"CARTERA",
-        "career":"UNEFON",
+        "career":"AT&T",
         "fechaCorte": "07 de Octubre",
         "proximaAsignacion": "27 días",
         "grupos": [
