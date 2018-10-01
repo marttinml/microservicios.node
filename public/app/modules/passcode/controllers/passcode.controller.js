@@ -48,7 +48,7 @@
                     $scope.$apply();
 
                     setTimeout(function(){
-                        $('.input-card').val('');
+                        $('.input-card').trigger('empty');
                         $('#card1').focus();
                     },500);
                 }
