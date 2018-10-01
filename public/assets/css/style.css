@@ -532,6 +532,7 @@ table.detalle-consumos{
 	width: 100%;
 	text-align: left;
 	border-collapse: collapse;
+	font-size: 13px;
 }
 table.detalle-consumos thead{
 	background-color: rgb(241,241,241);
@@ -618,13 +619,15 @@ att-alert .content{
 	margin: auto;
 }
 att-alert .content i.icon{
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	display: block;
-	margin: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 20px auto;
 }
 att-alert .ok .content i.icon{
-	background-image: url(icon/);
+	background-image: url(icon/ico.ok.green.svg);
 }	
 att-alert .content i.msj{
 	width: 50px;
