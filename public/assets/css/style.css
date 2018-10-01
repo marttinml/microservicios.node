@@ -166,6 +166,12 @@ hr{
 .f-medium{
 	font-family: ATTAleckSans_Md, sans-serif;
 }
+.blue .f-regular{
+	font-family: ATTAleckSans_Rg, sans-serif;
+}
+.yellow .f-regular{
+	font-family: Gloriola_Rg, sans-serif;
+}
 
 .yellow .f-light{
 	font-family: Gloriola_Lt, sans-serif;
@@ -467,10 +473,11 @@ hr{
 }
 .tabs .tab i{
 	height: 18px;
-	width: 16px;
+	width: 18px;
 	display: block;
 	margin: auto;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 .tabs-content{
 	height: auto;
@@ -524,6 +531,7 @@ i.item-radio{
 table.detalle-consumos{
 	width: 100%;
 	text-align: left;
+	border-collapse: collapse;
 }
 table.detalle-consumos thead{
 	background-color: rgb(241,241,241);
@@ -538,7 +546,7 @@ table.detalle-consumos td{
 	border-bottom: 1px solid rgb(222,222,222);
 }
 
-.overview-auto{
+.overflow-auto{
 	overflow:auto;
 }
 
@@ -561,6 +569,13 @@ table.detalle-consumos td{
 	margin: auto;
 }
 
+.c-pointer{
+	cursor: pointer;
+}
+.c-red{
+	color: red;
+}
+
 button{
 	max-width: 292px;
 	height: 44px;
@@ -568,3 +583,59 @@ button{
 	border-radius: 5px;
 }
 
+att-alert{
+
+}
+att-alert .alert{
+	position: absolute;
+    top: 55px;
+    left: 0;
+	right: 0;
+	background-color: white;
+	height: calc(100% - 40px);
+}
+
+att-alert .header{
+	color: white;
+	height: 50px;
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+
+att-alert .ok .header{
+	background-color: rgb(76,169,12);
+}
+att-alert .fail .header{
+	background-color: red;
+}
+
+att-alert .content{
+	padding: 20px;
+	text-align: center;
+	color: rgba(0,0,0,.4);
+	max-width: 800px;
+	margin: auto;
+}
+att-alert .content i.icon{
+	width: 50px;
+	height: 50px;
+	display: block;
+	margin: auto;
+}
+att-alert .ok .content i.icon{
+	background-image: url(icon/);
+}	
+att-alert .content i.msj{
+	width: 50px;
+	height: 50px;
+	display: block;
+	margin: auto;
+}
+att-alert .content i.prompt{
+	width: 50px;
+	height: 50px;
+	display: block;
+	margin: auto;
+	font-size: 16px;
+}

@@ -37,9 +37,15 @@
                 $(this).next('.input-card2').focus();
             }
             if(!$(this).next('.input-card').length){
-                // Code
+                if(Number($(this).val()) === 1){
+                    
+                }
             }
         });
+
+        $scope.valid = function(){
+            location.href = '#/cartera';
+        };
     
     };
     controller.$inject = ['$scope','$rootScope','$routeParams', '$compile'];

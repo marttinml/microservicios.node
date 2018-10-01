@@ -9,7 +9,7 @@
 
 		return {
 			restrict: 'E',
-	        templateUrl: 'app/shared/components/ng-spin/ng-spin.template.html',
+	        templateUrl: 'app/shared/components/att-spin/att-spin.template.html',
 	        transclude: true,
 	        link: link,
 			scope:{
@@ -21,5 +21,5 @@
 	
 
 	angular.module('app')
-		.directive('ngSpin',directive);
+		.directive('attSpin',directive);
 })();

@@ -1,3 +1,4 @@
+<att-spin ng-class="{hide:spin}"></att-spin>
 <main ng-class="cartera.color" ng-class="{'to-detail': item.toDetail}">
 		<att-header h1="cartera.titulo" h2="cartera.career" ></att-header>
 		
@@ -217,6 +218,9 @@
 						</div>
 					</div>
 					<div class="overview"></div>
+					<!-- <div class="alert-detail">
+						<hr>
+					</div> -->
 				</div>
 			</section>
 		</section>
@@ -224,3 +228,45 @@
 
 	
 	</main>
+
+
+
+	<div id="contentConsumos" class="alert-detail">
+		<hr>
+		<div class="tabs col-3">
+			<div class="tab" ng-repeat="item in consumos" ng-class="{ 'active' : item.active }"  ng-click="resetConsumosTabs(item);">
+				<i class="icon" ng-class="item.icono"></i>
+				<h3>{{item.tipo}}</h3>
+			</div>
+		</div>
+		<div class="tabs col-3 fs-12">
+			<div>
+				Seleciona un periodo
+			</div>
+			<div class="t-right" ng-click="changePeriodo(0)">
+				<i class="item-radio" ng-class="{active: radioPeriodo[0].active}"></i>
+				<span>Actual</span>
+			</div>
+			<div class="t-right" ng-click="changePeriodo(1)">
+				<i class="item-radio" ng-class="{active: radioPeriodo[1].active}"></i>
+				<span>Anterior</span>
+			</div>
+		</div>
+		<div class="wrapper-chart">
+			<canvas id="myChart"></canvas>
+		</div>
+		<div class="overflow-auto">
+			<table class="detalle-consumos">
+				<thead>
+					<tr>
+						<th ng-repeat="item in consumosTable.titulos">{{item}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in consumosTable.contenido">
+						<td ng-repeat="jtem in item">{{jtem}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>

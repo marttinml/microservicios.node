@@ -217,7 +217,7 @@
                           opts.j ++;
                   }
                   cntl.val(formater);
-                },1000);
+                },200);
 
         }
 

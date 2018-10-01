@@ -5,6 +5,8 @@
 
         // $scope.toDetail = false;
         // $scope.detail = {};
+        $scope.spin = false;
+
         $scope.showDetail = function(item, id){
 
             $scope.item = item;
@@ -420,6 +422,11 @@
     $scope.chart = internet.chart;
     $scope.carrer = $scope.cartera.color === 'yellow'? 'rgba(255,198,0,.8)' : 'rgba(0,159,219,.8)';
 
+    setTimeout(function(){
+        $scope.spin = true;
+        $scope.$apply();
+    },1000);
+    
     };
     controller.$inject = ['$scope','$rootScope','$routeParams', '$compile'];
     angular.module('app').controller('CarteraController', controller);

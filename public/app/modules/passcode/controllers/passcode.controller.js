@@ -2,10 +2,28 @@
 (function () {
 
     var controller = function ($scope, $rootScope, $routeParams, $compile) {
+        $scope.spin = false;
         $scope.info = { titulo: '', career: ''};
-
+        $scope.passcodeFail = false;
         $scope.getInfo = function(){
             $scope.info = { titulo: 'BIENVENIDO A', career: 'UNEFON', color: 'yellow'};
+            $scope.obtionsAlert = {
+                show: false,
+                type: 'ok',
+                title: '¡ENVIADO!',
+                icon: 'ok',
+                msj: 'Hemos enviado una liga para que puedas crear tu passcode al correo franz@mail.com',
+                prompt: 'Si no reconoces este mail, llama al *611 o acude a tu sucursal AT&T más cercana para brindarte ayuda'
+            }
+
+            setTimeout(function(){
+                $scope.spin = true;
+                $scope.$apply();
+            },1000);
+        };
+
+        $scope.recoverPasscode = function(){
+            $scope.obtionsAlert.show = true;
         };
 
         $scope.getInfo();
@@ -25,8 +43,15 @@
                 console.log($(this).val());
                 if(Number($(this).val()) === 1){
                     location.href = '#/cartera'
+                }else{
+                    $scope.passcodeFail = true;
+                    $scope.$apply();
+
+                    setTimeout(function(){
+                        $('.input-card').val('');
+                        $('#card1').focus();
+                    },500);
                 }
-                
             }
         });
     
